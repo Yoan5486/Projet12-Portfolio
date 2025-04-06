@@ -49,16 +49,34 @@ header {
 }
 
 main {
-    #presentation  {
+    #presentation {
         
        
         color: $couleur_principale;
+    }
+    #projet1, #projet2 {
+        color: $couleur_secondaire;
     }
     .flex_direction {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+    .margin_section {
+       
+        max-width: 650px;
+    }
+    .section_title {
+        color: black; 
+    }
+    .presentation_title {
+        font-weight: 500 ;
+        font-size: 18px;
+    }
+    .txt_conclusion {
+        font-weight: 500;
+        font-size: 20px;
     }
     img {
        width: 200px;
@@ -78,7 +96,7 @@ main {
 }
 
 footer {
-    .footer-links {
+    .footer_links {
         a {
             color: black; 
             text-decoration : underline;
@@ -86,8 +104,11 @@ footer {
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.2rem;
         margin-bottom: 1rem;
+    }
+    .margin_copy {
+        margin: 0;
     }
     text-align: end;
     background-color: #6ca923;
@@ -115,8 +136,7 @@ a {
     text-wrap: wrap;
 }
 
-// Animation appliquée aux sections
-.section-fade {
+.section_fade {
     opacity: 0;
     animation: fadeIn 800ms ease-in-out forwards;
 
@@ -131,4 +151,60 @@ a {
     &#projet2 {
         animation-delay: 1332ms;
     }
+    
+    &#conclusion {
+        animation-delay: 1750ms;
+    }
 }
+
+@media screen and (max-width: 720px) {
+    main {
+      .flex_direction {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+      }
+  
+      .presentation_title,
+      .section_title,
+      .txt_conclusion {
+        font-size: 16px;
+      }
+    }
+  
+    header {
+      h1 {
+        font-size: 24px;
+        margin: 16px 0;
+      }
+  
+      .design_nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+  
+        .txt_nav {
+          font-size: 16px;
+        }
+      }
+    }
+  
+    footer {
+      .footer_links {
+        gap: 0.4rem;
+        a {
+          font-size: 14px;
+        }
+      }
+      .margin_copy {
+        font-size: 14px;
+      }
+    }
+  }
+  

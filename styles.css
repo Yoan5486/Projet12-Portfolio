@@ -52,11 +52,28 @@ main {
 main #presentation {
   color: #008625;
 }
+main #projet1, main #projet2 {
+  color: #ff79da;
+}
 main .flex_direction {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+main .margin_section {
+  max-width: 650px;
+}
+main .section_title {
+  color: black;
+}
+main .presentation_title {
+  font-weight: 500;
+  font-size: 18px;
+}
+main .txt_conclusion {
+  font-weight: 500;
+  font-size: 20px;
 }
 main img {
   width: 200px;
@@ -75,16 +92,19 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
-footer .footer-links {
+footer .footer_links {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.2rem;
   margin-bottom: 1rem;
 }
-footer .footer-links a {
+footer .footer_links a {
   color: black;
   text-decoration: underline;
+}
+footer .margin_copy {
+  margin: 0;
 }
 
 h1 {
@@ -105,16 +125,58 @@ a {
   text-wrap: wrap;
 }
 
-.section-fade {
+.section_fade {
   opacity: 0;
   animation: fadeIn 800ms ease-in-out forwards;
 }
-.section-fade#presentation {
+.section_fade#presentation {
   animation-delay: 0ms;
 }
-.section-fade#projet1 {
+.section_fade#projet1 {
   animation-delay: 666ms;
 }
-.section-fade#projet2 {
+.section_fade#projet2 {
   animation-delay: 1332ms;
+}
+.section_fade#conclusion {
+  animation-delay: 1750ms;
+}
+
+@media screen and (max-width: 720px) {
+  main .flex_direction {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  main img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+  main .presentation_title,
+  main .section_title,
+  main .txt_conclusion {
+    font-size: 16px;
+  }
+  header h1 {
+    font-size: 24px;
+    margin: 16px 0;
+  }
+  header .design_nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  header .design_nav .txt_nav {
+    font-size: 16px;
+  }
+  footer .footer_links {
+    gap: 0.4rem;
+  }
+  footer .footer_links a {
+    font-size: 14px;
+  }
+  footer .margin_copy {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=styles.css.map */
